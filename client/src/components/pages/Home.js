@@ -1,5 +1,6 @@
 import React from 'react'
 import Grid from "@mui/material/Grid"
+import { Link } from '@mui/material'
 
 import ContainerHome from '../ContainerHome.js'
 import DifficultOptions from '../DifficultOptions.js'
@@ -10,7 +11,6 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css'; 
-import { Link } from '@mui/material'
 
 const Home = () => {
 
@@ -18,17 +18,17 @@ const Home = () => {
     <ContainerHome>
       <Grid container spacing={1}>
         <Grid item xs={12}>
-          <Link href='/game' color="inherit" underline='none'>
+          <Link href='/classic' color="inherit" underline='none'>
             <DifficultOptions nameGame={"Classico"} description={"Maior Palavra"}/>
           </Link>
         </Grid>
         <Grid item xs={12}>
-          <Link href='/game' color="inherit" underline='none'>
+          <Link href='/half' color="inherit" underline='none'>
             <DifficultOptions nameGame={"Metade"} description={"Metade das palavras"}/>
           </Link>
         </Grid>
         <Grid item xs={12}>
-          <Link href='/game' color="inherit" underline='none'>
+          <Link href='/zen' color="inherit" underline='none'>
             <DifficultOptions nameGame={"Zen"} description={"Sem limite de tempo"}/>
           </Link>
         </Grid>
