@@ -41,7 +41,7 @@ function getScore (data) {
   return score[data]
 }
 
-export const IconStatus = () => {
+const InformativeIcons = () => {
 
   const [openRules, setOpenRules] = useState(false)
   const handleOpenRules = () => setOpenRules(true)
@@ -107,3 +107,5 @@ export const IconStatus = () => {
     </Box>
   )
 }
+
+export default InformativeIcons

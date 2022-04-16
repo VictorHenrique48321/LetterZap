@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Box from "@mui/material/Box"
 import {Typography } from '@mui/material'
 
-const GridItem = (props) => {
+const DifficultOptions = (props) => {
   return (
       <Box sx= {{
         textAlign: "center",
@@ -27,4 +27,4 @@ const GridItem = (props) => {
   )
 }
 
-export default GridItem
+export default DifficultOptions
