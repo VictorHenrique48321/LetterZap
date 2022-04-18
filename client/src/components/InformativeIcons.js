@@ -51,6 +51,9 @@ const InformativeIcons = () => {
   const handleOpenScore = () => setOpenScore(true)
   const handleCloseScore= () => setOpenScore(false)
 
+  const score = {"classic": 500, "half": 1000, "zen":350}
+  localStorage.setItem("UserScore", JSON.stringify(score))
+
   return (
     <Box sx = {{
       display: "flex",
