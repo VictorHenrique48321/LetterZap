@@ -1,6 +1,4 @@
 import React from 'react'
-import Grid from "@mui/material/Grid"
-import { Link } from '@mui/material'
 
 import ContainerHome from '../ContainerHome.js'
 import DifficultOptions from '../DifficultOptions.js'
@@ -16,26 +14,10 @@ const Home = () => {
 
   return (
     <ContainerHome>
-      <Grid container spacing={1}>
-        <Grid item xs={12}>
-          <Link href='/classic' color="inherit" underline='none'>
-            <DifficultOptions nameGame={"Classico"} description={"Maior Palavra"}/>
-          </Link>
-        </Grid>
-        <Grid item xs={12}>
-          <Link href='/half' color="inherit" underline='none'>
-            <DifficultOptions nameGame={"Metade"} description={"Metade das palavras"}/>
-          </Link>
-        </Grid>
-        <Grid item xs={12}>
-          <Link href='/zen' color="inherit" underline='none'>
-            <DifficultOptions nameGame={"Zen"} description={"Sem limite de tempo"}/>
-          </Link>
-        </Grid>
-        <Grid item xs={12}>
-          <InformativeIcons/>
-        </Grid>
-      </Grid>
+      <DifficultOptions nameGame={"Classico"} description={"Maior Palavra"}/>
+      <DifficultOptions nameGame={"Metade"} description={"Metade das palavras"}/>
+      <DifficultOptions nameGame={"Zen"} description={"Sem limite de tempo"}/>
+      <InformativeIcons/>
     </ContainerHome>
   )
 }

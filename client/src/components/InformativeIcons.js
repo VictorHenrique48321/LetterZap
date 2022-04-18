@@ -7,7 +7,7 @@ import { List, ListItem, Modal, Typography } from '@mui/material';
 
 const iconStyle = {
   borderRadius: "50px",
-  backgroundColor: "#1565c0",
+  backgroundColor: "#C2E346",
   height: "30px",
   width: "30px",
   textAlign: "center",

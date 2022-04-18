@@ -6,8 +6,8 @@ const DifficultOptions = (props) => {
   return (
       <Box sx= {{
         textAlign: "center",
-        border: "1px solid black",
-        backgroundColor: "primary.dark",
+        border: "2px solid #515920",
+        backgroundColor: "#b5d545",
         height: "100px",
         width: {"xs": "90%", "md": "60%"},
         display: "flex",
@@ -15,7 +15,8 @@ const DifficultOptions = (props) => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        cursor: "pointer"
+        cursor: "pointer",
+        borderRadius: "5px"
       }}>
         <Typography variant='h5' fontSize="18px">
           {props.nameGame}

@@ -1,37 +1,36 @@
 import React from 'react'
 
 import Box from "@mui/material/Box"
+import Grid from "@mui/material/Grid"
+import { Link } from '@mui/material'
 
-const firstContainerStyle = {
-  width: "100vw",
-  height: "100vh",
-  backgroundColor: 'primary.dark',
-  display: "flex",
-  justifyContent: "center", 
-  alignItems: "center"
-}
-
-const secondContainerStyle = {
-  width: "60%",
-  height: "75%",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: "primary.main"
-}
-
-const thirdContainerStyle = {
-  width: "90%",
-  height: "70%",
-  backgroundColor: "primary.main"
-}
+import themes from './layouts/HomeTheme'
 
 const ContainerHome = (props) => {
   return (
-    <Box sx={firstContainerStyle}>
-        <Box sx={secondContainerStyle}>
-          <Box sx={thirdContainerStyle}>
-            {props.children}
+    <Box sx={themes.firstContainerStyle}>
+        <Box sx={themes.secondContainerStyle}>
+          <Box sx={themes.thirdContainerStyle}>
+            <Grid container spacing={1}>
+              <Grid item xs={12}>
+                <Link href='/classic' color="inherit" underline='none'>
+                  {props.children[0]}
+                </Link>
+              </Grid>
+              <Grid item xs={12}>
+                <Link href='/half' color="inherit" underline='none'>
+                  {props.children[1]}
+                </Link>
+              </Grid>
+              <Grid item xs={12}>
+                <Link href='/zen' color="inherit" underline='none'>
+                  {props.children[2]}
+                </Link>
+              </Grid>
+              <Grid item xs={12}>
+                {props.children[3]}
+              </Grid>
+            </Grid>
           </Box>
         </Box>
     </Box>
