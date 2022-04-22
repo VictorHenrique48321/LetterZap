@@ -5,8 +5,6 @@ import { Grid, Typography } from '@mui/material'
 import ContainerGameTheme from "../layouts/GameTheme" 
 
 const ContainerGame = (props) => {
-  console.log(props)
-
   return (
     <Box sx={ContainerGameTheme.container}>
       <Grid container height="100%">

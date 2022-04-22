@@ -58,12 +58,14 @@ const themes = {
     justifyContent: "center",
     alignItems: "center",
     fontSize: {"xs": "14px", "sm": "18px"},
-    backgroundColor: "#F9FFD4",
+    backgroundColor: "#8FAF02",
     border: {"xs": "1px solid black", "sm": "2px solid black"},
     margin: ".5rem .2rem",
     width: {"xs": "15px", "sm": "25px", "md": "30px"},
     height: {"xs": "15px", "sm": "25px", "md": "30px"},
-    textTransform: "uppercase"
+    textTransform: "uppercase",
+    color: "#8FAF02",
+    userSelect: "none"
   },
   
   lettersContainer: {
