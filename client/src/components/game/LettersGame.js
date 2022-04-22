@@ -1,8 +1,9 @@
-import React, {useRef, useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import Box from "@mui/material/Box"
 import {Button, Typography } from '@mui/material'
 
 import ContainerGameTheme from "../layouts/GameTheme" 
+import "../css/swapClasse.css"
 
 const LettersGame = (props) => {
 
@@ -15,9 +16,9 @@ const LettersGame = (props) => {
       for(let i = 0; i < props.word.length; i++){
         if(props.word[i].innerHTML === "") {
           props.word[i].innerHTML = letterClicked
-          props.word[i].className = "MuiTypography-root MuiTypography-body1 css-ucd4w5-MuiTypography-root"
+          props.word[i].className = "letterBox"
           e.target.innerHTML = ""
-          e.target.className = "MuiTypography-root MuiTypography-body1 css-e1mv6v-MuiTypography-root"
+          e.target.className = "whiteBox"
           return
         }
       }
@@ -31,9 +32,9 @@ const LettersGame = (props) => {
       for(let i = 0; i < props.word.length; i++){
         if(props.letterGame[i].innerHTML === "") {
           props.letterGame[i].innerHTML = letterClicked
-          props.letterGame[i].className = "MuiTypography-root MuiTypography-body1 css-ucd4w5-MuiTypography-root"
+          props.letterGame[i].className = "letterBox"
           e.target.innerHTML = ""
-          e.target.className = "MuiTypography-root MuiTypography-body1 css-e1mv6v-MuiTypography-root"
+          e.target.className = "whiteBox"
           return
         }
       }
@@ -58,8 +59,8 @@ const LettersGame = (props) => {
           if(props.letterGame[j].textContent !== props.word[i].textContent && props.letterGame[j].textContent === "") {
             props.letterGame[j].textContent = props.word[i].textContent
             props.word[i].textContent = ""
-            props.letterGame[j].className = "MuiTypography-root MuiTypography-body1 css-ucd4w5-MuiTypography-root"
-            props.word[i].className = "MuiTypography-root MuiTypography-body1 css-e1mv6v-MuiTypography-root"
+            props.letterGame[j].className = "letterBox"
+            props.word[i].className = "whiteBox"
             break
           }
         }
