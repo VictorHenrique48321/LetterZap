@@ -4,7 +4,6 @@ import ContainerHome from '../ContainerHome.js'
 import DifficultOptions from '../DifficultOptions.js'
 import InformativeIcons from '../InformativeIcons.js'
 
-import "../../../src/assets/css/reset.css"
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';

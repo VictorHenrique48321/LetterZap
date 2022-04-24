@@ -27,7 +27,7 @@ const themes = {
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
-    width: {"xs": "60px", "sm": "100px"},
+    width: {"xs": "70px", "sm": "100px"},
     height: {"xs": "20px", "sm": "30px"},
     marginRight: {"xs": ".3rem", "sm": "none"},
     border: "2px solid black"

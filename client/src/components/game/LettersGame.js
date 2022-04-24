@@ -3,7 +3,7 @@ import Box from "@mui/material/Box"
 import {Button, Typography } from '@mui/material'
 
 import ContainerGameTheme from "../layouts/GameTheme" 
-import "../css/swapClasse.css"
+import "../../assets/css/swapClasse.css"
 
 const LettersGame = (props) => {
 

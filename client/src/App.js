@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Game from "./components/pages/Game"
 import Home from "./components/pages/Home"
+import "./assets/css/reset.css"
 
 const App = () => {
   return (
