@@ -7,7 +7,7 @@ import "../../assets/css/swapClasse.css"
 
 const LettersGame = (props) => {
 
-  const [letters, setLetters] = useState(["a","g","u","a"])
+  const [letters, setLetters] = useState(props.backendData[0])
 
   const insertLetter = (e) => {
     const letterClicked = e.target.innerHTML

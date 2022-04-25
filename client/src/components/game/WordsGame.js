@@ -6,9 +6,19 @@ import ContainerGameTheme from "../layouts/GameTheme"
 
 const WordsGame = (props) => {
 
-  const [words, setWords] = useState([ "aagu", "agua","auga","ugaa", "guaa","gaua", "agu"])
+  let wordsSent = []
+  
+  for(let p = 1; p < props.backendData.length; p++){
+    wordsSent.push(props.backendData[p])
+  }
+
+  const [words, setWords] = useState(wordsSent)
+  const [discoveredWord, setDiscoveredWods] = useState(0)
 
   const validateWordSent = () => {
+    if(discoveredWord === words.length){
+      console.log("voce terminou")
+    }
     let cont = 0
     let word = props.wordSent.split("")
     for(let element of props.wordsLetters) {
@@ -21,6 +31,7 @@ const WordsGame = (props) => {
               child.style.backgroundColor = "#F9FFD4"
             }
             props.setScore(props.score + 10)
+            setDiscoveredWods(discoveredWord + 1)
           }
         }
       }

@@ -7,6 +7,8 @@ async function correctWords() {
   let anagrams = []
   const arr = letterGenerated() /*  <- gera letras aleatorias */
 
+  trueWords.push(arr)
+
   anagrams = allAnagrams(arr) /*  <- gera anagrams das letras geradas */
 
   await Promise.allSettled(anagrams.map(async (anagram)=>{ /*  <- valida se o anagrama eh valido */
