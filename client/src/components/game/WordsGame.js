@@ -8,11 +8,7 @@ const WordsGame = (props) => {
 
   let wordsSent = []
   
-  for(let p = 1; p < props.backendData.length; p++){
-    wordsSent.push(props.backendData[p])
-  }
-
-  const [words, setWords] = useState(wordsSent)
+  const [words, setWords] = useState([])
   const [discoveredWord, setDiscoveredWods] = useState(0)
 
   const validateWordSent = () => {
@@ -41,11 +37,35 @@ const WordsGame = (props) => {
   }, [props.wordSent])
 
   useEffect(() => {
-    if(discoveredWord === words.length){
-      props.setGameScore(props.gamemode)
+    props.setGameScore(props.gamemode)
+
+    if(props.gamemode !== "zen" && discoveredWord === 5 && discoveredWord > 1){
+      props.setRequestFinished(!props.requestFinished)
+      props.setCallNewWords(!props.callNeWords)
+    }
+
+    if(discoveredWord === words.length && discoveredWord > 1){
+      props.setRequestFinished(!props.requestFinished)
+      props.setCallNewWords(!props.callNeWords)
     }
   }, [discoveredWord])
   
+  useEffect(() => {
+    if(props.gamemode === "half") {
+      for(let p = 1; p < props.backendData.length/2; p++){
+        wordsSent.push(props.backendData[p])
+      }
+    } else {
+      for(let p = 1; p < props.backendData.length; p++){
+        wordsSent.push(props.backendData[p])
+      }
+    }
+
+    const asc = wordsSent.sort((a,b) => a.length - b.length)
+
+    setWords(asc)
+
+  }, [])
   
   return (
     <Box sx={ContainerGameTheme.wordsContainer}>

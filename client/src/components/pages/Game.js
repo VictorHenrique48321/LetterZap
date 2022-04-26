@@ -15,6 +15,7 @@ const Game = () => {
   const [score, setScore] = useState(0)
   const [backendData, setBackendData] = useState([])
   const [requestFinished, setRequestFinished] = useState(false)
+  const [callNeWords, setCallNewWords] = useState(false)
 
   const letterGame = useRef([])
   const word = useRef([])
@@ -37,7 +38,7 @@ const Game = () => {
       .then(response => response.json())
       .then(data => {setBackendData(data)})
       .then(() => setRequestFinished(!requestFinished))
-  }, [])
+  }, [callNeWords])
   
 
   if(requestFinished){
@@ -56,6 +57,10 @@ const Game = () => {
           score={score}
           backendData={backendData}
           setGameScore={setGameScore}
+          callNeWords={callNeWords}
+          setCallNewWords={setCallNewWords}
+          setRequestFinished={setRequestFinished}
+          requestFinished={requestFinished}
           />
         <LettersGame 
           gamemode={params.gamemode} 

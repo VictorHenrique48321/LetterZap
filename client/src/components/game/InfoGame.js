@@ -12,7 +12,7 @@ const InfoGame = (props) => {
 
   const first = useRef()
 
-  const startingMinutes = 1
+  const startingMinutes = 3
   let time = startingMinutes * 60
   
   const updateCountdown = () => {
@@ -54,7 +54,7 @@ const InfoGame = (props) => {
           <Typography sx={ContainerGameTheme.infoBox} ref={first}></Typography>
         </Box>
         <Box sx={{display: "flex"}}>
-          <Link href="/classic" color="blue" underline='none'>
+          <Link href="/" underline='none'>
             <CloseIcon sx={ContainerGameTheme.infoIcon}/>
           </Link>
         </Box>
