@@ -13,7 +13,7 @@ async function correctWords() {
 
   await Promise.allSettled(anagrams.map(async (anagram)=>{ /*  <- valida se o anagrama eh valido */
     const param = anagram
-    const URL = `https://significado.herokuapp.com/v2/${param}`
+    const URL = `https://www.dicio.com.br/${param}`
     const statusCode = await searchWords(URL)
 
     if(statusCode === true && anagram.length > 2 && trueWords.length <= 14){

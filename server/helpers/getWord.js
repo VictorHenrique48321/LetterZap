@@ -10,7 +10,7 @@ async function getWord(request, response){
 
   } catch (error) {
 
-    return response.status(500).json(error.message)
+    return error
 
   }
   

@@ -54,7 +54,9 @@ const InfoGame = (props) => {
           <Typography sx={ContainerGameTheme.infoBox} ref={first}></Typography>
         </Box>
         <Box sx={{display: "flex"}}>
-          <CloseIcon sx={ContainerGameTheme.infoIcon} onClick={props.setGameScore(props.gamemode)}/>
+          <Link href="/classic" color="blue" underline='none'>
+            <CloseIcon sx={ContainerGameTheme.infoIcon}/>
+          </Link>
         </Box>
       </Box>
     )

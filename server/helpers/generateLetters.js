@@ -1,5 +1,5 @@
 function letterGenerated(){
-  let lettersQuantity = Math.floor(Math.random() * (7 - 5)) + 5
+  let lettersQuantity = Math.floor(Math.random() * (7 - 4)) + 4
   
   const vowel = fillVowel(lettersQuantity)
   const consonant = fillConsonant(lettersQuantity)
@@ -15,6 +15,12 @@ function fillVowel(quantityLetters){
   let generatedVowel = []
 
   switch(quantityLetters){
+    case 4:
+      for(let i =0; i<=1;i++){
+        generatedVowel.push(vowel[Math.floor(Math.random() * 5)]) 
+      }
+      return generatedVowel
+
     case 5:
       for(let i =0; i<=1;i++){
         generatedVowel.push(vowel[Math.floor(Math.random() * 5)]) 
@@ -38,6 +44,12 @@ function fillConsonant(quantityLetters){
   let generatedConsonant = []
 
   switch(quantityLetters){
+    case 4:
+      for(let i =0; i<=1;i++){
+        generatedConsonant.push(consonant[Math.floor(Math.random() * 14)]) 
+      }
+      return generatedConsonant
+
     case 5:
       for(let i =0; i<=2;i++){
         generatedConsonant.push(consonant[Math.floor(Math.random() * 14)]) 
