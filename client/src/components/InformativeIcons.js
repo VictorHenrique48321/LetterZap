@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
@@ -36,9 +36,10 @@ const modalStyle = {
 }
 
 function getScore (data) {
-  const scoreString = localStorage.getItem('UserScore')
-  const score = JSON.parse(scoreString)
-  return score[data]
+  if(localStorage.getItem(data)){
+    const userScore = localStorage.getItem(data)
+    return userScore
+  }
 }
 
 const InformativeIcons = () => {
@@ -51,8 +52,17 @@ const InformativeIcons = () => {
   const handleOpenScore = () => setOpenScore(true)
   const handleCloseScore= () => setOpenScore(false)
 
-  const score = {"classic": 500, "half": 1000, "zen":350}
-  localStorage.setItem("UserScore", JSON.stringify(score))
+  useEffect(() => {
+    if(!localStorage.getItem('classic')){
+      const classic = 0
+      const half = 0
+      const zen = 0
+      localStorage.setItem("classic", classic)
+      localStorage.setItem("half", half)
+      localStorage.setItem("zen", zen)
+    }
+  }, [])
+  
 
   return (
     <Box sx = {{

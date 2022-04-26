@@ -20,6 +20,12 @@ const Game = () => {
   const word = useRef([])
   const wordsLetters = useRef([])
 
+  const setGameScore = (gamemode) => {
+    if(score > localStorage.getItem(gamemode)){
+      localStorage.setItem(gamemode, score)
+    }
+  }
+
   useEffect(() => {
     letterGame.current = []
     word.current = []
@@ -40,6 +46,7 @@ const Game = () => {
         <InfoGame 
           gamemode={params.gamemode}
           score={score}
+          setGameScore={setGameScore}
           />
         <WordsGame 
           gamemode={params.gamemode} 
@@ -48,6 +55,7 @@ const Game = () => {
           setScore={setScore}
           score={score}
           backendData={backendData}
+          setGameScore={setGameScore}
           />
         <LettersGame 
           gamemode={params.gamemode} 

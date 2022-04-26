@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link } from '@mui/material'
 import Box from "@mui/material/Box"
 import {Modal, Typography } from '@mui/material'
-
+import CloseIcon from '@mui/icons-material/Close';
 import ContainerGameTheme from "../layouts/GameTheme" 
 
 const InfoGame = (props) => {
@@ -52,6 +52,9 @@ const InfoGame = (props) => {
         <Box sx={{display: "flex"}}>
           <Typography sx={{marginRight: "1rem", display: "flex", justifyContent: "center", alignItems: "center"}}>TEMPO</Typography>
           <Typography sx={ContainerGameTheme.infoBox} ref={first}></Typography>
+        </Box>
+        <Box sx={{display: "flex"}}>
+          <CloseIcon sx={ContainerGameTheme.infoIcon} onClick={props.setGameScore(props.gamemode)}/>
         </Box>
       </Box>
     )

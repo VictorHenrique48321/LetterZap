@@ -16,9 +16,6 @@ const WordsGame = (props) => {
   const [discoveredWord, setDiscoveredWods] = useState(0)
 
   const validateWordSent = () => {
-    if(discoveredWord === words.length){
-      console.log("voce terminou")
-    }
     let cont = 0
     let word = props.wordSent.split("")
     for(let element of props.wordsLetters) {
@@ -42,6 +39,13 @@ const WordsGame = (props) => {
   useEffect(() => {
     validateWordSent()
   }, [props.wordSent])
+
+  useEffect(() => {
+    if(discoveredWord === words.length){
+      props.setGameScore(props.gamemode)
+    }
+  }, [discoveredWord])
+  
   
   return (
     <Box sx={ContainerGameTheme.wordsContainer}>

@@ -32,6 +32,14 @@ const themes = {
     marginRight: {"xs": ".3rem", "sm": "none"},
     border: "2px solid black"
   },
+
+  infoIcon: {
+    width: "30px",
+    height: "30px",
+    border: {"xs": "1px solid black", "sm": "2px solid black"},
+    borderRadius: "5px",
+    backgroundColor: "#b5d545"
+  },
   
   gameContainer: {
     height: "100%",
